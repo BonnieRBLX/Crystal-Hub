@@ -106,6 +106,7 @@ local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
 CrystalHubMM2.Name = "CrystalHubMM2"
 CrystalHubMM2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CrystalHubMM2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+CrystalHubMM2.ResetOnSpawn = false
 
 KeySystem.Name = "KeySystem"
 KeySystem.Parent = CrystalHubMM2
