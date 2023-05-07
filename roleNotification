@@ -1,0 +1,29 @@
+--[[
+CrystalHub
+]]
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Notification";
+	Text = "Messages visible only for you!";
+	Duration = 3.5;
+	Icon  = "rbxassetid://10086464520"
+})
+
+for i,v in pairs(game.Players:GetPlayers()) do
+	if v.Backpack:FindFirstChild('Gun') or v.Character:FindFirstChild('Gun') then
+		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{
+		
+			Text = v.Name.." is Sheriff";
+			Font= Enum.Font.SourceSansBold;
+			Colour = Color3.fromRGB(255,255,255)
+		})
+		elseif v.Backpack:FindFirstChild('Knife') or v.Character:FindFirstChild('Knife') then
+			game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{
+
+				Text = v.Name.." is Murderer";
+				Font= Enum.Font.SourceSansBold;
+				Colour = Color3.fromRGB(255,255,255)
+			})
+		
+	end
+end
